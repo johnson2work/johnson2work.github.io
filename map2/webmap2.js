@@ -6,3 +6,6 @@ L.tileLayer.wms('http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi', {
   transparent: true,
   attribution: 'NOAA, Iowa State University'
 }).addTo(myMap)
+L.esri.dynamicMapLayer({
+  url: 'https://nowcoast.noaa.gov/arcgis/rest/services/nowcoast/radar_meteo_imagery_nexrad_time/MapServer'
+}).addTo(myMap)

@@ -12,6 +12,6 @@ var latlngs = [
     [29.651222, -82.348364]
 ];
 var polyline = L.polyline(latlngs, {color: 'red'}).addTo(myMap);
-map.fitBounds(polyline.getBounds());
+myMap.fitBounds(polyline.getBounds());
 myTriangle.bindPopup('A polygon')
 nolaPoint.bindPopup('A <em>marker</em>')

@@ -3,19 +3,23 @@ L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z
 let stateDemographicsUrl = 'https://geog4046.github.io/portfolio/data/us_state_demographics_ESRI_2010A.geojson'
 jQuery.getJSON(stateDemographicsUrl, function (data) {
   let stateStyle = function (feature) {
-    let age = feature.properties.MED_AGE // get the current state's Median Age attribute
-    let stateColor = 'red' // default color be a darker green
-    if ( age < 38 ) { stateColor = 'green' } // if the state's median age is less than the average, color it a lighter green
+    let fgender = feature.properties.FEMALES
+    let mgender = feature.properties.MALES
+    let stateColor = 'blue'
+    if ( mgender < fgender ) { stateColor = 'pink' }
     return {
-      color: stateColor, //use the color variable above for the value
-      weight: 1,
+      color: stateColor,
+      weight: 2,
       fillOpacity: 0.2
     }
   }
 let onEachFeature = function (feature, layer) {
   let name = feature.properties.STATE_NAME
-  let age = feature.properties.MED_AGE
-  layer.bindPopup('Median age of ' + name + ': ' + age + '<br>National average: 38')
+  if (stateColor = 'pink') {
+    layer.bindPopup('Majority Population in ' + name + ' are <br>Females.')
+  } else {
+    layer.bindPopup('Majority Population in ' + name + ' are <br>Males.')
+  }
 }
 let stateGeojsonOptions = {
     style: stateStyle,

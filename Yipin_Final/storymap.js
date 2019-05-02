@@ -5,6 +5,7 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map
 
 let trailPoint1 = L.marker([31.071811, -91.511633]).addTo(myMap)
   .bindPopup( "<Center><b><h2>Welcome to Clark Creek Nature Area</h2></b><br><Center><img src = 'https://i.imgur.com/RNnIGRc.jpg'/><br>The Clark Creek Natural Area in southwestern Mississippi is one of the Magnolia State's most beautiful outdoor treasures. Comprising more than 700 acres, it is highlighted by some 50 waterfalls, ranging in size 10 to more than 30 feet in height. Creation and protection of this fabulous area came about in 1978. First recommendation is to wear waterproof shoes. Second,     bring plenty of water and a few snacks. Come early morning to avoid the crowd. Do not forget to bring $4 cash for the honor box.<br><a href= 'https://i.imgur.com/TfGPehs.jpg' target='_blank'>Full Size Map</a>")
+  .openOn(myMap)
 let trailPoint2 = L.marker([31.068225, -91.516744]).addTo(myMap)
   .bindPopup("<Center><b><h2>Primitive Trailhead</h2></b><Center><img src = 'https://i.imgur.com/bQC5RR4.jpg'/><br>Hiking downhill for the first 0.45 mile leads you to the beginning of the primitive trail. Take the trail to the left of the tree and prepare to get wet crossing creeks! Additional suggestion: walking sticks come in handy to get rid of spider webs!<br><a href= 'https://i.imgur.com/esWytOC.jpg' target='_blank'>Full Size Photo</a>")
 let trailPoint3 = L.marker([31.057306, -91.518356]).addTo(myMap)
